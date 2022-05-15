@@ -48,3 +48,83 @@ body {
 input[name="r"] {
   display: none;
 }
+.controls__container {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: flex;
+}
+.info-container {
+  width: 25%;
+  height: 100%;
+  overflow: hidden;
+}
+.info {
+  display: flex;
+  width: 500%;
+}
+.info-text {
+  display: block;
+  color: #fff;
+  width: 100%;  
+  font-size: 2em;
+}
+.navigation {
+  justify-content: right;
+  width: 75%;
+  display: flex;
+}
+.bar {
+  display: block;
+  width: 2em;
+  height: 1em;
+  cursor: pointer;
+  background-color: white;
+  opacity: 0.5;
+  border-radius: 1em;
+  margin-right: 1em;
+  transition: all .4s ease;
+}
+.bar:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  background-color: blue;
+}
+/* #endregion main*/
+/* #region checked*/
+#r1:checked ~ .slide__wrapper > .s1,
+#r1:checked ~ .controls__container > .info-container > .info > .s1 {
+  transition: .8s all;
+  transform: translateX(0%);
+}
+#r2:checked ~ .slide__wrapper >.s1,
+#r2:checked ~ .controls__container > .info-container > .info > .s1 {
+  transition: .8s all;
+  transform: translateX(-100%);
+}
+#r3:checked ~ .slide__wrapper > .s1,
+#r3:checked ~ .controls__container > .info-container > .info > .s1 {
+  transition: .8s all;
+  transform: translateX(-200%);
+}
+#r4:checked ~ .slide__wrapper > .s1,
+#r4:checked ~ .controls__container > .info-container > .info > .s1 {
+  transition: .8s all;
+  transform: translateX(-300%);
+}
+#r1:checked ~ .controls__container > .navigation > .l1,
+#r2:checked ~ .controls__container > .navigation > .l2,
+#r3:checked ~ .controls__container > .navigation > .l3,
+#r4:checked ~ .controls__container > .navigation > .l4 {
+  transition: .4s all;
+  border: 0.3em solid #ddd;
+  background-color: transparent;
+}
+label::after {
+  content: "";
+    position: relative;
+    right: 0.3em;
+    border: 1.3em solid transparent;
+    width: 3em;
+    height: 1em;
+}
+/* #endregion checked*/
