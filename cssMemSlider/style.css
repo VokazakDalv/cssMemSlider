@@ -131,3 +131,30 @@ label::after {
     height: 1em;
 }
 /* #endregion checked*/
+/* #region media */
+@media (max-width: 450px) {
+  .slides {
+    row-gap: 2em;
+  }
+  .controls__container {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    row-gap: 2em;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .navigation {
+    width: 100%;
+    justify-content: center;
+  }
+  .bar:last-child {
+    margin-right: 0;
+  }
+  .info-text {
+    font-size: 0.8em;
+  }
+  .info-container {
+    width: 70%;
+  }
+}
+/* #endregion media */
